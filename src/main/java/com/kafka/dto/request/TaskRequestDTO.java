@@ -15,7 +15,7 @@ import lombok.Setter;
 
 @Getter
 @Setter
-public class TaskRequestDTO extends BaseRequestDTO{
+public class TaskRequestDTO {
 
 	@NotEmpty(message = "Task name cannot be empty")
 	@Size(min = 3, max = 100, message = "Task name must be between 3 and 100 characters")
