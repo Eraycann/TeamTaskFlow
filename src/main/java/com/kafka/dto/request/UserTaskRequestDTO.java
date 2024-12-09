@@ -6,7 +6,7 @@ import lombok.Setter;
 
 @Getter
 @Setter
-public class UserTaskRequestDTO extends BaseRequestDTO{
+public class UserTaskRequestDTO {
 
     @NotNull(message = "User ID cannot be null")
 	private Long userId;

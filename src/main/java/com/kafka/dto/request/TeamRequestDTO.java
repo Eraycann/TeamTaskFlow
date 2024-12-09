@@ -8,7 +8,7 @@ import lombok.Setter;
 
 @Getter
 @Setter
-public class TeamRequestDTO extends BaseRequestDTO{
+public class TeamRequestDTO {
 
     @NotEmpty(message = "Team name cannot be empty")
     @Size(min = 3, max = 50, message = "Team name must be between 3 and 50 characters")
