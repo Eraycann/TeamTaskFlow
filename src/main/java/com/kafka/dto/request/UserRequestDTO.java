@@ -10,7 +10,7 @@ import lombok.Setter;
 
 @Getter
 @Setter
-public class UserRequestDTO extends BaseRequestDTO{
+public class UserRequestDTO {
 
 	  @NotEmpty(message = "First name cannot be empty")
 	  @Size(min = 2, max = 50, message = "First name must be between 2 and 50 characters")
