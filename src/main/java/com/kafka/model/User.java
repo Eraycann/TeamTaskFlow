@@ -2,6 +2,11 @@ package com.kafka.model;
 
 
 import java.time.LocalDateTime;
+import java.util.Collection;
+import java.util.List;
+
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.userdetails.UserDetails;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -17,8 +22,11 @@ import lombok.Setter;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class User extends BaseEntity{
-
+public class User extends BaseEntity implements UserDetails{
+	
+	@Column(name = "username", length = 50, unique = true)
+	private String username;
+	
 	@Column(name = "first_name", length = 50, nullable = false)
 	private String firstName;
 	
@@ -33,4 +41,9 @@ public class User extends BaseEntity{
 	
 	@Column(name = "updated_at")
 	private LocalDateTime updatedAt;
+
+	@Override
+	public Collection<? extends GrantedAuthority> getAuthorities() {
+		return List.of();
+	}
 }
