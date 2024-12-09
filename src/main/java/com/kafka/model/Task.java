@@ -26,29 +26,33 @@ import lombok.Setter;
 public class Task extends BaseEntity{
 
 	
-	@Column(name = "task_name")
+	@Column(name = "task_name", length = 100, nullable = false)
 	private String taskName;
 	
-	@Column(name = "description")
+	@Column(name = "description", length = 255, nullable = false)
 	private String description;
 	
 	@Enumerated(EnumType.STRING)
-	@Column(name = "status")
+	@Column(name = "status", nullable = false)
 	private Status status;
 	
 	@Enumerated(EnumType.STRING)
-	@Column(name = "priority")
+	@Column(name = "priority", nullable = false)
 	private Priority priority;
 	
-	@Column(name = "assigned_at")
-	private LocalDateTime assignedAt;
+	@Column(name = "assigned_at", nullable = false)
+	private LocalDateTime assignedAt;	// Boş ise LocalDateTime.now()'dan gelecek. İŞ KATMANINDA
 	
-	@Column(name = "due_date")
+	@Column(name = "due_date", nullable = false)
 	private LocalDateTime dueDate;
 	
 	@ManyToOne
-	@JoinColumn(name = "assigned_by")
+	@JoinColumn(name = "assigned_by", nullable = false)
 	private User assignedBy;
+	
+	@ManyToOne
+	@JoinColumn(name = "updated_by")
+	private User updatedBy;
 	
 	@Column(name = "updated_at")
 	private LocalDateTime updatedAt;
