@@ -10,9 +10,6 @@ import lombok.Setter;
 @Setter
 public class RoleRequestDTO {
 
-    @NotNull(message = "ID cannot be null")
-	private Long id;
-
     @NotEmpty(message = "Role name cannot be empty")
     @Size(min = 3, max = 50, message = "Role name must be between 3 and 50 characters")
     private String roleName;

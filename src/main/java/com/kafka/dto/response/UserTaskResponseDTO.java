@@ -5,7 +5,7 @@ import lombok.Setter;
 
 @Getter
 @Setter
-public class UserTaskRequestDTO extends BaseResponseDTO{
+public class UserTaskResponseDTO extends BaseResponseDTO{
 
 	private UserResponseDTO user;
 	
