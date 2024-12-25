@@ -2,6 +2,8 @@ package com.kafka.model;
 
 import java.time.LocalDateTime;
 
+import org.springframework.data.annotation.LastModifiedDate;
+
 import com.kafka.enums.Priority;
 import com.kafka.enums.Status;
 
@@ -54,6 +56,7 @@ public class Task extends BaseEntity{
 	@JoinColumn(name = "updated_by")
 	private User updatedBy;
 	
+    @LastModifiedDate
 	@Column(name = "updated_at")
 	private LocalDateTime updatedAt;
 }

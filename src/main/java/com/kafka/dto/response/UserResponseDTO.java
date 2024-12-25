@@ -9,13 +9,13 @@ import lombok.Setter;
 @Setter
 public class UserResponseDTO extends BaseResponseDTO{
 
+	private String username;
+	
 	private String firstName;
 	
 	private String lastName;
 	
 	private String email;
-	
-	private String password;
-	
+		
 	private LocalDateTime updatedAt;
 }

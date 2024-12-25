@@ -5,6 +5,7 @@ import java.time.LocalDateTime;
 import java.util.Collection;
 import java.util.List;
 
+import org.springframework.data.annotation.LastModifiedDate;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
@@ -39,6 +40,7 @@ public class User extends BaseEntity implements UserDetails{
 	@Column(name = "password", nullable = false)
 	private String password;
 	
+    @LastModifiedDate
 	@Column(name = "updated_at")
 	private LocalDateTime updatedAt;
 

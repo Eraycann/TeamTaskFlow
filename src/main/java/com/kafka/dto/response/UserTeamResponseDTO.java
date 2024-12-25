@@ -6,6 +6,8 @@ import lombok.Setter;
 @Getter
 @Setter
 public class UserTeamResponseDTO {
+	
+	private Long id;
 
 	private UserResponseDTO user;
 	

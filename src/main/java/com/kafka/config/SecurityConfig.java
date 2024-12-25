@@ -17,6 +17,7 @@ import com.kafka.jwt.JWTAuthenticationFilter;
 @EnableWebSecurity
 public class SecurityConfig {
 
+
 	public static final String REGISTER = "/register";
 	public static final String AUTHENTICATE = "/authenticate";
 	public static final String REFRESH_TOKEN = "/refreshToken";

@@ -1,6 +1,5 @@
 package com.kafka.dto.request;
 
-import java.time.LocalDateTime;
 
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotEmpty;
@@ -11,6 +10,10 @@ import lombok.Setter;
 @Getter
 @Setter
 public class UserRequestDTO {
+	
+	  @NotEmpty(message = "username cannot be empty")
+	  @Size(min = 2, max = 50, message = " username must be between 2 and 50 characters")
+	  private String username;
 
 	  @NotEmpty(message = "First name cannot be empty")
 	  @Size(min = 2, max = 50, message = "First name must be between 2 and 50 characters")
@@ -27,5 +30,4 @@ public class UserRequestDTO {
 	  @NotEmpty(message = "Password cannot be empty")
 	  private String password;
 
-	  private LocalDateTime updatedAt;
 }

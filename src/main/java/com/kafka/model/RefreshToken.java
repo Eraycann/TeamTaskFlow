@@ -1,5 +1,6 @@
 package com.kafka.model;
 
+import java.time.LocalDateTime;
 import java.util.Date;
 
 import jakarta.persistence.Column;
@@ -23,7 +24,7 @@ public class RefreshToken extends BaseEntity{
 	private String refreshToken;
 	
 	@Column(name = "expired_date")
-	private Date expiredDate;
+	private LocalDateTime expiredDate;
 	
 	@ManyToOne
 	private User user;

@@ -25,9 +25,9 @@ public class TaskResponseDTO extends BaseResponseDTO{
 	
 	private LocalDateTime dueDate;
 	
-	private User assignedBy;
+	private UserResponseDTO assignedBy;
 	
-	private User updatedBy;
+	private UserResponseDTO updatedBy;
 	
 	private LocalDateTime updatedAt;
 }
