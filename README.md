@@ -27,6 +27,21 @@ Bu projede çalışırken:
 - **MapStruct** ve **Lombok** kullanarak kod yazımını hızlandırıp, daha temiz ve bakımı kolay hale getirdim. ✨
 
 
+## Github Workflow kullanımı deneyimi
+# Branching Strategy (Dal Stratejisi)
+- **Ana Dal (main/master):** Her zaman stabil ve production-ready kod burada tutulur.
+- **Feature Branches:** Yeni özellik eklerken, `feature/<isim>` formatında branch'ler oluşturuyorum.  
+  *Örnek:* `feature/create-entities`
+- **Chore Branches:** Proje dosyalarını güncellemek, bağımlılıkları yenilemek veya lisans eklemek gibi rutin işleri yaparken `chore/<isim>` branch'leri kullanıyorum.
+- **Commit ve Merge:** Her geliştirme aşamasında, ilgili branch üzerinde düzenli commit'ler alarak ilerliyorum. Geliştirme tamamlandığında, branch'i ana dal ile birleştiriyorum. Bu sayede ana dal her zaman güncel ve stabil kalıyor.
+
+# Commit Message Conventions (Commit Mesajı Standartları)
+Commit mesajlarımda, yapılan değişikliğin ne tür bir değişiklik olduğunu açıkça ifade eden bir yapı kullanıyorum:
+- **feat:** Yeni özellik eklemeleri için.
+- **chore:** Bağımlılık güncellemeleri, proje dosyalarında değişiklikler veya lisans ekleme gibi rutin işler için.
+- **docs:** Dokümantasyon güncellemeleri için.
+- **fix:** Hata düzeltmeleri için.
+
 ## Kurulum ve Çalıştırma 🛠️
 Projeyi yerel makinenizde çalıştırmak için şu adımları izleyebilirsiniz:
 
